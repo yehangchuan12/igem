@@ -1,0 +1,407 @@
+{% extends "layout.html" %}
+  
+{% block title %}Design{% endblock %}
+{% block lead %}Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better, or more accessible to our community.{% endblock %}
+
+{% block extraStyles %}
+<link href="{{ url_for('static', filename = 'css/design.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+{% block page_content %}
+<div class="image" style="background-image: url('https://gitlab.igem.org/2023/nefu-china/-/raw/test/img/mountain%20range.jpg'); height: 300px; position: relative; text-align: center;">
+    <div class="standard-header banner-v2 curvy-divider" style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);">
+      <h1>Design</h1>
+    </div>
+  </div>
+
+<div class="d-flex flex-column justify-content-center align-items-center curvy-divider">
+    <div class="body-container wave-div narrow">
+        <div class="container">
+          <div class="about-section d-flex flex-row justify-content-center align-items-center">
+            <div class="wrapper">
+              <h2>What is an LFA?</h2>
+              <p>Lateral flow assays (LFAs) are paper-based detection methods. Lateral flow immunoassays, a specific type of LFA, use a series of antibodies to detect whether a biomarker is present in a liquid sample.<sup>1</sup></p>
+            </div>
+            <div class="img-wrapper bunch-of-lfas">
+              <img style="max-height: 15rem; padding: 2rem;"src="https://static.igem.wiki/teams/4477/wiki/images/lfa-group.svg" alt="lfa bunch">
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="gray-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+        </svg>
+    </div>
+</div>
+
+<div class="gray d-flex flex-column justify-content-center">
+    <div class="d-flex flex-row justify-content-center body-padding">
+        <div class="index-padding">
+            <div class="fixed-index d-flex flex-column align-self-start" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-sine">
+              <div class="wrapper mx-4">
+                <div class="index heading d-flex flex-row align-items-center justify-content-start py-4">
+                  <div class="top-select active" id="toc" role="button" onclick="selectTop(this)">Index</div>
+                  <div class="top-select" id="refs" role="button" onclick="selectTop(this)">References</div>
+                </div>
+        
+                <div class="tab references content d-flex flex-column hidden" id="references">
+                    <div class="wrapper">
+                        <p>
+                            1.	Koczula, K. M. & Gallotta, A. Lateral flow assays. Essays Biochem. 60, 111–120 (2016).
+                            <br>
+                            2.	Libby, P. The changing landscape of atherosclerosis. Nature 592, 524–533 (2021).
+                            <br>
+                            3.	De Meyer, T., Muyldermans, S. & Depicker, A. Nanobody-based products as research and diagnostic tools. Trends Biotechnol. 32, 263–270 (2014).
+                            <br>
+                            4.	Schiopu, A. et al. Recombinant Human Antibodies Against Aldehyde-Modified Apolipoprotein B-100 Peptide Sequences Inhibit Atherosclerosis. Circulation 110, 2047–2052 (2004).
+                            <br>
+                            5.	Gandhi, S., Banga, I., Kumar Maurya, P. & A. Eremin, S. A gold nanoparticle-single-chain fragment variable antibody as an immunoprobe for rapid detection of morphine by dipstick. RSC Adv. 8, 1511–1518 (2018).
+                            <br>
+                            6.	Robinson, M.-P. et al. Efficient expression of full-length antibodies in the cytoplasm of engineered bacteria. Nat. Commun. 6, 8072 (2015).
+                            <br>
+                            7.	Lobstein, J. et al. SHuffle, a novel Escherichia coli protein expression strain capable of correctly folding disulfide bonded proteins in its cytoplasm. Microb. Cell Factories 11, 753 (2012).
+                            <br>
+                            8.	A toolbox of anti–mouse and anti–rabbit IgG secondary nanobodies | Journal of Cell Biology | Rockefeller University Press. <a href="https://rupress.org/jcb/article/217/3/1143/39133/A-toolbox-of-anti-mouse-and-anti-rabbit-IgG">https://rupress.org/jcb/article/217/3/1143/39133/A-toolbox-of-anti-mouse-and-anti-rabbit-IgG</a>.
+                            <br>
+                            9.	Human-derived anti-oxidized LDL autoantibody blocks uptake of oxidized LDL by macrophages and localizes to atherosclerotic lesions in vivo - PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/11498462/">https://pubmed.ncbi.nlm.nih.gov/11498462/</a> .
+                            <br>
+                            10.	The Three-Dimensional Structure of a Phosphorylcholine-Binding Mouse Immunoglobulin Fab and the Nature of the Antigen Binding Site | PNAS <a href="https://www.pnas.org/doi/10.1073/pnas.71.11.4298?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub++0pubmed">https://www.pnas.org/doi/10.1073/pnas.71.11.4298?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub++0pubmed</a>.
+                          </p>
+                    </div>
+                </div>
+        
+                <div class="tab index" id="index">
+                  <div class="index content d-flex flex-column" id="scrollspy-index-list">
+                    <div class="index-item active" role="button" scrollTo="head1" onclick="scrollToSection(this)">How does an LFA Work?</div>
+                    
+                    <div class="index-item" role="button" scrollTo="head2" onclick="scrollToSection(this)">How Our LFA is Unique</div>
+          
+                    <div class="indented index-item" role="button" scrollTo="head3" onclick="scrollToSection(this)">What is Unique to our Design</div>
+          
+                    <div class="index-item" role="button" scrollTo="head4" onclick="scrollToSection(this)">Choosing a Chassis</div>
+          
+                    <div class="indented index-item" role="button" scrollTo="head5" onclick="scrollToSection(this)">How SHuffle Works</div>
+          
+                    <div class="index-item" role="button" scrollTo="head6" onclick="scrollToSection(this)">Plasmid Design</div>
+          
+                    <div class="index-item" role="button" scrollTo="head7" onclick="scrollToSection(this)">Designing Our Antibodies</div>
+          
+                    <div class="indented index-item" role="button" scrollTo="head8" onclick="scrollToSection(this)">Labelled Anti-ApoBMDA Design</div>
+          
+                    <div class="indented index-item" role="button" scrollTo="head9" onclick="scrollToSection(this)">Anti-OxLDL Design</div>
+
+                    <div class="indented index-item" role="button" scrollTo="head10" onclick="scrollToSection(this)">Anti-IgG Design</div>
+
+                    <div class="index-item" role="button" scrollTo="head11" onclick="scrollToSection(this)">Biosafety</div>
+
+                    <div class="index-item" role="button" scrollTo="head12" onclick="scrollToSection(this)">Hardware</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+    
+        <div class="body-container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-sine">
+            <div class="container">
+                <div class="body-section top-page" id="head1">
+                    <div class="lfa-beginning">
+                        <div class="text-wrapper" >
+                            <h2> How does an LFA Work?</h2>
+                        </div>
+                        <div class="image-wrapper d-flex flex-column justify-content-center align-items-center lfa-diagram img-fluid">
+                            <img src="https://static.igem.wiki/teams/4477/wiki/images/diag-lfadiagram.svg" alt="lfa diagram">
+
+                            <div class="subtitle-wrapper pt-4">
+                                <p>Diagram of an LFA. Most LFAs include a sample pad, conjugate pad, absorbent pad, nitrocellulose membrane, and absorbent pad, along with the test and control lines to detect a biomarker. </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                        <div class="diagram">
+                            <div class="steps-container top">
+                                <div class="text-wrapper-des">
+                                    <p>
+                                        First, a <span class="bold-text">sample is applied onto the sample pad</span>, which is designed to prepare the sample for optimum flow through the rest of the test strip.
+                                    </p>
+                                </div>
+                                <img src="https://static.igem.wiki/teams/4477/wiki/images/diag-samplepad.svg" alt="sample applied">
+                            </div>
+
+                            <div class="steps-container">
+                                <img src="https://static.igem.wiki/teams/4477/wiki/images/diag-conjugatepad.svg" alt="">
+
+                                <div class="text-wrapper-des">
+                                    <p>
+                                        The sample flows through to the <span class="bold-text">conjugate release pad</span> that then is absorbed by the test membrane. <span class="bold-text">Antibodies</span> on the conjugate pad <span class="bold-text">bind to the biomarker</span> in the sample. 
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                            <div class="steps-container">
+                                <div class="text-wrapper-des">
+                                    <p>
+                                        This <span class="bold-text">primary antibody</span> is labeled with <span class="bold-text">nanoparticles</span> that allow these antibodies to be detected with the <span class="bold-text">naked eye.</span> 
+                                        If the <span class="bold-text">molecule of interest</span>, such as the <span class="bold-text">biomarker</span>, is in the sample, these labeled primary antibodies <span class="bold-text">bind</span> to the molecule and lead to the <span class="bold-text">visualization of colored lines</span> later in the test.
+                                    </p>
+                                </div>
+                                <img src="https://static.igem.wiki/teams/4477/wiki/images/diag-igggold.svg" alt="">
+                            </div>
+                            
+
+                            <div class="steps-container">
+                                <img style="max-height: 23rem;" src="https://static.igem.wiki/teams/4477/wiki/images/diag-samplefront.svg" alt="nitrocellulose pad">
+                                <div class="text-wrapper-des">
+                                    <p>The target molecule/labeled antibody complexes travel onto a <span class="bold-text">nitrocellulose membrane</span>, where <span class="bold-text">two more antibodies</span> are immobilized in lines.</p>
+                                </div>
+                            </div>
+
+                            <div class="steps-container-thicc">
+                                <div class="text-wrapper-des divider">
+                                    The complexes reach the <span class="bold-text">test line</span> first, where another <span class="bold-text">primary antibody</span> targeting the <span class="bold-text">molecule of interest</span> is situated.
+                                </div>
+                            </div>
+
+                            <div class="steps-container">
+                                <div class="text-wrapper-des">
+                                    <p>
+                                        The target molecule binds this other primary antibody, and the whole complex becomes <span class="bold-text">immobilized</span> at the test line, forming a <span class="bold-text">“sandwich complex”</span>.
+                                        This other primary antibody is distinct from the first primary antibody and recognizes a <span class="bold-text">different epitope</span> on the molecule of interest. The labeled antibodies show up as a <span class="bold-text">colored line</span>, signaling detection of the target molecule.
+                                    </p>
+                                </div>
+
+                                <img src="https://static.igem.wiki/teams/4477/wiki/images/diag-samcomp.svg" alt="sandwich complex">
+                                
+
+                            </div>
+
+                            <div class="steps-container-thicc">
+                                <div class="text-wrapper-des divider">
+                                    The labeled antibody is <span class="bold-text">unable to bind</span> to the test line if the biomarker is <span class="bold-text">not present</span> in the sample. Regardless of whether the target molecule is in the sample, the labeled antibody continues down the nitrocellulose membrane and <span class="bold-text">reaches the control line.</span>
+                                </div>
+                            </div>
+
+                            <div class="steps-container">
+                                <img src="https://static.igem.wiki/teams/4477/wiki/images/diagcontrolline.svg" alt="">
+
+                                <div class="text-wrapper-des">
+                                    <p>Here, a <span class="bold-text">secondary antibody</span> that binds to the labeled antibody itself is immobilized. If the test is working properly, the <span class="bold-text">secondary and labeled antibody will bind</span>, causing the control line to show a <span class="bold-text">colored line</span>. The sample continues off the membrane and is <span class="bold-text">absorbed</span> by an absorbent pad, <span class="bold-text">stopping the fluid flow</span>.<sup>1</sup></p>
+                                </div>
+                            </div>
+
+                            <div class="img-wrapper large">
+                                <img src="https://static.igem.wiki/teams/4477/wiki/images/diag-posneg.svg" alt="positive and negative results">
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="body-section" id="head2">
+                    <div class="text-wrapper">
+                        <h2>How Our LFA is Unique</h2>
+                    </div>
+                    
+                    <div class="text-wrapper">
+                        <p>
+                            For our LFA, we decided to test for the <span class="bold-text">presence of oxidized low density lipoprotein (oxLDL)</span> because oxLDL is a biomarker of atherosclerosis found in the blood.<sup>2</sup> Then, if our test detected oxLDL, the patient would have evidence they are experiencing early atherosclerosis. 
+
+                            Our strip contains one <span class="bold-text">full-length antibody,</span> an <span class="bold-text">scFv fragment,</span> and a <span class="bold-text">VHH nanobody fragment</span><sup>3</sup>, all which are produced in <span class="italic-text">E. coli</span> SHuffle. To detect oxLDL, we designed <span class="bold-text">two primary antibodies.</span> The labeled primary antibody binds to a <span class="bold-text">protein component</span> of oxLDL called <span class="bold-text">MDA-modified apolipoprotein B</span> (apoB<sub>MDA</sub>)<sup>4</sup>, while the other primary antibody immobilized at the test line is polyclonal and <span class="bold-text">binds to</span> both <span class="bold-text">apoBMDA</span> and <span class="bold-text">oxidized phospholipids</span> within oxLDL. The fact that these two primary antibodies bound to <span class="bold-text">different epitopes</span> helped ensure the antibodies <span class="bold-text">did not interfere</span> with the other’s binding site. Lastly, we designed a <span class="bold-text">secondary antibody</span> targeting the constant domain of the labeled primary antibody and used this on the <span class="bold-text">control line</span> to verify the test worked correctly.
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="body-section" id="head3">
+                    <div class="text-wrapper">
+                        <h4>What is <span class="bold-text">Unique</span> to our Design</h4>
+                    </div>
+                    
+                    <ul>
+                        <li>Utilizes a <span class="bold-text">special strain</span> of <span class="italic-text">E. coli</span> to produce antibodies</li>
+                        <li>LFA incorporates <span class="bold-text">non-full length</span> antibodies</li>
+                        <ul>
+                            <li>These antibody fragments are equally capable of recognizing epitopes just as full-length antibodies are, but are less complex and easier to develop<sup>5</sup></li>
+                        </ul>
+                        <li>Full-length antibody is a <span class="bold-text">recombinant of human and mouse genes</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="body-section" id="head4">
+                    <div class="text-wrapper">
+                        <h2>Choosing a Chassis</h2>
+                        <p>
+                            An LFA requires the production of three different antibodies, which have <span class="bold-text">complex structures</span> containing <span class="bold-text">disulfide bonds.</span> Most bacteria, like <span class="italic-text">E. coli</span>, can only produce the disulfide bonds necessary for antibody production in their periplasm, because their cytoplasm is a <span class="bold-text">reducing environment.</span> This is <span class="bold-text">not favorable</span> for the formation of disulfide bonds. In order for the bonds to be formed, modification of the cytoplasm is <span class="bold-text">vital</span> for utilizing the cytoplasmic space to produce proteins. One group of scientists developed a strain of <span class="italic-text">E. coli</span> with an <span class="bold-text">oxidizing cytoplasm</span> that allows the formation of disulfide bonds, and this strain is <span class="bold-text">SHuffle.</span><sup>6</sup> We determined through modeling that <span class="bold-text">all</span> of <span class="bold-text">our antibodies</span> and antibody fragments <span class="bold-text">have disulfide bonds</span> and the number of cysteines fall within the optimal range of our choice, so we chose the B-strain of <span class="italic-text">E. coli</span> SHuffle.  
+        
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="body-section" id="head5">
+                    <div class="text-wrapper">
+                        <h4>How SHuffle Works</h4>
+                    </div>
+                    
+                    <div class="text-wrapper">
+                        <p>
+                            Because of this oxidizing cytoplasm, which allows cells to correctly form disulfide bonds in proteins, researchers are able to <span class="bold-text">overexpress correctly folded proteins</span> within this chassis.<sup>7</sup>
+                            Several <span class="bold-text">major genetic modifications</span> result in this modified cytoplasm. Two genes coding for cytoplasmic reductases, specifically <span class="bold-text">thioredoxin reductase (trxB) and glutathione reductase (gor), are knocked out</span> from the <span class="italic-text">E. coli</span> genome.<sup>7</sup> While this leads to a less reducing and therefore more oxidizing cytoplasm, these two <span class="bold-text">mutations</span> on their own are <span class="bold-text">lethal</span> to the <span class="italic-text">E. coli</span>. This is due to a <span class="bold-text">lack of reductases</span> recycling other essential enzymes into their reduced state. So, another <span class="bold-text">mutation called AhpC*</span> is introduced into the genome, modifying 2-Cys alkyl hydroperoxide reductase. This mutation returns reducing power to an enzyme called glutaredoxin 1 (Grx1) and makes the previously described <span class="bold-text">double knock out non-lethal</span> to <span class="italic-text">E. coli</span>. In the oxidizing environment, thioredoxin enzymes including thioredoxin 1 (Trx1) are able to form disulfide bonds between cysteine residues of proteins.<sup>7</sup> However, these thioredoxins form disulfide bonds indiscriminately between any two cysteine residues, meaning that the protein could be misfolded at this stage. So, researchers overexpress an enzyme called disulfide bond isomerase c (DsbC), which is naturally found in the periplasm of <span class="italic-text">E. coli</span>. This enzyme moves, or shuffles, <span class="bold-text">mis-formed disulfide bonds</span> to the <span class="bold-text">correct conformations</span> which finally results in correctly folded proteins in the cytoplasm.<sup>7</sup>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="body-section" id="head6">
+                    <div class="text-wrapper">
+                        <h2>Plasmid Design</h2>
+                    </div>
+                    
+                    <div class="text-wrapper">
+                        <p>
+                            For each antibody, we designed a <span class="bold-text">composite insert.</span> Each insert was complete with a strong <span class="bold-text">T7 promoter,</span> an <span class="italic-text">E. coli</span> codon-optimized <span class="bold-text">ribosomal binding site (RBS),</span> the antibody <span class="bold-text">coding sequence,</span> and a <span class="bold-text">terminator.</span> Between each component, we included <span class="bold-text">non-illegal restriction sites</span> for modular design. This is so that other individuals or iGEM teams can swap out parts if needed to <span class="bold-text">vary the rate of transcription or coding sequence.</span> This is also very essential in transformation. In addition, we added a <span class="bold-text">His-tag to allow purification</span> of our protein through Ni-NTA affinity chromatography. We decided to BioBrick a <span class="bold-text">composite part</span> for each antibody in order to use <span class="bold-text">standard assembly.</span> Having a single synthesized component only requires one step to assemble our plasmid. The vector we used was <span class="bold-text">pSB3K3,</span> a low-copy number plasmid. Our goal was to synthesize functional antibodies, so we chose a low-copy plasmid to <span class="bold-text">limit the metabolic burden</span> on our cells, increasing the success of our antibodies being synthesized correctly.
+                        </p>
+                    </div>
+                </div>
+                <h4>Full IgG Anti-oxLDL Antibody Plasmid</h4>
+                <div class="plasmids-wrapper">
+                    <img src="https://static.igem.wiki/teams/4477/wiki/plasmids/labeled-anti-oxldl-igg-complete-device-3-1.svg" alt="">
+                </div>
+                <h4>IK17 Anti-oxLDL scFv Plasmid</h4>
+                <div class="plasmids-wrapper">
+                    <img src="https://static.igem.wiki/teams/4477/wiki/plasmids/ik17-anti-oxldl-scfv-protein-epitope-complete-device-4.svg" alt="">
+                </div>
+                <h4>McPC603 Anti-oxLDL scFv Plasmid</h4>
+                <div class="plasmids-wrapper">
+                    <img src="https://static.igem.wiki/teams/4477/wiki/plasmids/mcpc603-anti-oxldl-scfv-lipid-epitope-complete-device-1.svg" alt="">
+                </div>
+                <h4>Anti-IgG VHH Plasmid</h4>
+                <div class="plasmids-wrapper">
+                    <img src="https://static.igem.wiki/teams/4477/wiki/plasmids/anti-mouse-vhh-complete-device-2.svg" alt="">
+                </div>
+            </div>
+        
+
+            <div class="container">
+                <div class="body-section" id="head7">
+                    <div class="text-wrapper">
+                        <h2>Designing Our Antibodies</h2>
+                    </div>
+                </div>   
+
+                <div class="body-section" id="head8">
+                    <div class="text-wrapper">
+                        <h4>Labelled Anti-ApoB<sub>MDA</sub> Design</h4>
+                        <p>
+                            We decided to develop a <span class="bold-text">full-length IgG</span> to use as our <span class="bold-text">labeled anti-apoB<sub>MDA</sub> primary antibody</span>. While antibody fragments that omit the constant domain of IgGs are simpler to produce, we chose to include the entire IgG for this antibody because the antibody needed its <span class="bold-text">constant domain</span> to <span class="bold-text">bind properly</span> to the <span class="bold-text">gold nanoparticles</span> we used to label it. 
+                            <br>
+                            The sequence of the variable domain of this antibody was based on that of <span class="bold-text">Orticumab,</span> a <span class="bold-text">human anti-apoB(MDA) antibody</span> currently being developed.<sup>4</sup> The constant domain of the antibody was <span class="bold-text">identical</span> to the constant domain of a <span class="bold-text">mouse IgG1</span>. We chose to substitute the mouse constant domain in place of the human constant domain of Orticumab because there are <span class="bold-text">many secondary antibodies that bind</span> to our chosen mouse constant domain<sup>8</sup>, which made our design for the secondary antibody easier.
+                        </p>
+                    </div>
+                    <div class="wrapper-of-ab">
+                        <div class="img-wrapper ab-cards">
+                            <img class="abimg" src="https://static.igem.wiki/teams/4477/wiki/images/diag-fullab1.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="body-section" id="head9">
+                    <div class="text-wrapper">
+                        <h4>Anti-OxLDL Design</h4>
+                    </div>
+                    
+
+                    <div class="text-wrapper">
+                        <p>
+                            We also designed <span class="bold-text">two other</span> primary antibodies that could be used to <span class="bold-text">bind to the test line</span>. These were inspired by anti-oxLDL antibodies we found in literature, called <span class="bold-text">IK17<sup>9</sup> and McPC603<sup>10</sup>.</span> Like our labeled antibody, IK17 binds to the apoB protein that encircles oxLDL, but it <span class="bold-text">binds to a different epitope</span> than our labeled antibody (we used protein modeling to ensure this and verify that IK17 and the labeled antibody would not prevent the other from binding). <span class="bold-text">McPC603,</span> however, <span class="bold-text">binds to oxidized phospholipids</span> within the lipid core of oxLDL. One of the criteria for these other anti-oxLDL antibodies was that they be antibody <span class="bold-text">fragments</span> as opposed to full-length antibodies. Our rationale for this choice was that antibody fragments are <span class="bold-text">smaller</span> and contain <span class="bold-text">fewer disulfide bonds,</span> and thus <span class="bold-text">more efficient</span> for SHuffle bacteria to produce. In particular, IK17 and McPC603 are <span class="bold-text">single chain variable fragments (scFvs),</span> so they are only composed of a <span class="bold-text">variable light</span> and <span class="bold-text">variable heavy region.</span> Upon advice from Dr. Norbert Leitinger, a professor in the University of Virginia Department of Pharmacology, (see Modeling and Attributions for more details), we decided to <span class="bold-text">immobilize both</span> these different antibodies on the test line so we would have a <span class="bold-text">higher chance</span> of successful and specific <span class="bold-text">binding</span> to oxLDL.
+                        </p>
+                    </div>
+
+                    <div class="wrapper-of-ab">
+                        <div class="img-wrapper ab-cards">
+                            <img class="abimg" src="https://static.igem.wiki/teams/4477/wiki/images/diag-scfvdesc.svg" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="body-section" id="head10">
+                    
+                    <div class="text-wrapper"> 
+                        <h4>Anti-IgG Design</h4>
+                        <p>
+                            We designed a secondary antibody to be immobilized on the <span class="bold-text">control line.</span> This antibody was a <span class="bold-text">nanobody (VHH),</span> a variable region heavy chain only antibody naturally found in camelids. The sequence we used was encoded for an anti-mouse VHH that binds to the constant domain on mouse IgG1 antibodies.<sup>8</sup> This allowed the <span class="bold-text">VHH to bind to</span> the hybrid <span class="bold-text">full-length primary antibody</span> because it recognized the mouse constant domain within it.
+                        </p>
+                    </div>
+                    <div class="wrapper-of-ab">
+                        <div class="img-wrapper ab-cards">
+                            <img class="abimg" src="https://static.igem.wiki/teams/4477/wiki/images/diag-vhhlab.svg"/>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="container">
+                <div class="body-section" id="head11">
+                    <div class="text-wrapper">
+                        <h2>Biosafety</h2>
+                        <p>As synthetic biologists, it is our responsibility to take in all considerations in terms of the <span class="bold-text">safety of our device.</span> We met with experts in the field of biosafety to implement their expertise into our device design.
+                            The first expert we met to discuss lab safety and biocontainment measures was <span class="bold-text">Jennifer Kershner, a biosafety officer</span> at the University of Virginia. We discussed safety practices to employ in the lab to ensure that not only we stay safe, but that we also prevent release of biological agents in the environment. She mentioned that because we are only working with bacteria in the lab and not including them in our device that will leave the lab, we do not need to employ a kill switch of any sorts in our project design. In terms of the safety protocols we should instruct our consumers to use, we discussed the use of an alcohol wipe before the consumer pricks their finger on our device and then a bandaid for the consumer to put on afterwards to prevent the wound from getting infected. We have decided to put these two in the packaging of the test strip. Additionally, we asked about what measures a consumer should take when disposing of our test due to the use of blood. She explained that because the test will only require a small amount of blood and as long as the recombinant antibodies are neutralized, the consumer should be able to dispose of the test in a regular trash can. 
+                            This meeting gave us an idea about the <span class="bold-text">considerations we need to make</span> when designing the device to ensure the easiest process for our consumers so that they can stay safe. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="body-section"  id="head12">
+                    <div class="text-wrapper">
+                        <h2>Hardware</h2>
+                        <p>The hardware for our device consists of a <span class="bold-text">3D-printed plastic cassette</span> we designed that encapsulates the LFA test strip. A lancet for finger-pricking is also attached to the cassette. The cassette allows the LFA to be held in place and users to handle the device safely. When designing the cassette, we made sure it was both <span class="bold-text">safe and environmentally-friendly,</span> taking both the consumers' health and waste disposal processes into account. Our 3D model prototype also allows for mass production of our product easily.</p>
+                    </div>
+                    <a href="{{ url_for('static', filename='components/Virginia-2022-LFA-Cassette-Top.stl') }}" download>Download top part of cassette (.stl)</a>
+                    <br>
+                    <a href="{{ url_for('static', filename='components/Virginia-2022-LFA-Cassette-Bottom.stl') }}" dowload>Download bottom part of cassette (.stl)</a>
+                </div>
+            </div>
+
+            <div class="btn-wrapper d-flex justify-content-center align-items-center">
+                <a class="btn shadow-none read-next-button" type="button" href="{{ url_for('pages', page='engineering') }}">Read next: Engineering</a>
+            </div>
+        </div>
+        <div class="spacer-div"></div>
+    </div>
+</div>
+
+<div class="footer-preface curvy-divider">
+    <div class="footer-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+    </div>
+</div>
+    
+
+
+
+
+
+
+
+
+{% endblock %}
+
+

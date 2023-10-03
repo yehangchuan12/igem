@@ -1,0 +1,233 @@
+.team-photo{
+    max-width:20%;
+    height:auto;
+    border-radius: 10%;
+    align-content: center; 
+    padding: 8px;
+
+}
+
+.team-header-text{
+    color: black;
+    background-color: #EDB4B4;
+    border-radius:20px;
+    text-align: center;
+    display: inline-block;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    align-content: center;
+
+}
+
+.who-we{
+    color: white;
+    background-color: #535E84;
+    line-height: 40px;
+    border-radius: 15px;
+    text-align: center;
+    display: inline-block;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+}
+
+.border-lft{
+    border-color: #EDB4B4;
+    border-left-width: 1cm;
+    border-left-style: solid
+
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.blood-cells{
+    max-width:50%;
+    height: auto;
+    align-content: center;
+}
+
+.cards-section-team{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 10rem;
+}
+
+.card-pic{
+    max-width: 90%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-content: center;
+    border-radius: 50%
+    
+}
+
+.body-section.team-pics-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-card{
+    position: relative;
+    background-color: #fff;
+    max-width: 23rem;
+    height: 27rem;
+    box-shadow: 0 35px 80px rgba(0, 0, 0,0.15);
+    border-radius: 20px;
+    transition: 0.5s;
+    padding-top: 50px;
+}
+
+.detail {
+    position: relative;
+    display: flex;
+    opacity: 0;
+    z-index: -10;
+    justify-content: space-between;
+    padding: 10px 50px;
+    transform: translate(-20px);
+    transition-timing-function: linear;
+    transition-duration: 0s, 0.2s , 0.2s;
+    transition-property: z-index,opacity,transform;
+    transition-delay: 0.2s, 0s, 0s;
+}
+
+.button {
+    padding: 10px 30x;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cards-section-team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-section-team .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container .mycard{
+    width: 60vw;
+    margin: 2rem;
+    box-shadow: inset 5px 5px 5px rgb(0 0 0 / 5%), inset -5px -5px 5px rgb(255 255 255 / 50%), 5px 5px 5px rgb(0 0 0 / 5%), -5px -5px 5px rgb(255 255 255 / 50%);
+    -webkit-box-shadow: inset 5px 5px 5px rgb(0 0 0 / 5%), inset -5px -5px 5px rgb(255 255 255 / 50%), 5px 5px 5px rgb(0 0 0 / 5%), -5px -5px 5px rgb(255 255 255 / 50%);
+    -moz-box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05), inset -5px -5px 5px rgba(255, 255, 255, 0.5), 5px 5px 5px rgba(0,0,0,0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container .mycard:hover{
+    box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5),
+                inset 6px 6px 20px rgba(0,0,0,0.1);
+}
+
+.mycard .imgBx img {
+    height: 18rem;
+    width: 18rem;
+    object-fit: cover;
+    border-radius: 100rem;
+    padding: 2rem;
+}
+
+.mycard .imgBx {
+    box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0),
+              inset 3px 3px 5px rgba(55, 84, 170, .15),
+              inset -3px -3px 5px rgba(255, 255, 255, .5),
+              0px 0px 4px rgba(255, 255, 255, .2) !important;
+    -webkit-box-shadow:inset 0px 0px 4px rgba(255, 255, 255, 0),
+    inset 3px 3px 5px rgba(55, 84, 170, .15),
+    inset -3px -3px 5px rgba(255, 255, 255, .5),
+    0px 0px 4px rgba(255, 255, 255, .2) !important;
+    -moz-box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0),
+    inset 3px 3px 5px rgba(55, 84, 170, .15),
+    inset -3px -3px 5px rgba(255, 255, 255, .5),
+    0px 0px 4px rgba(255, 255, 255, .2) !important;
+
+    border-radius: 100rem;
+    margin: 2rem;
+}
+
+.contentBx {
+    padding: 2rem;
+}
+
+.contentBx h2{
+    text-align:left;
+    padding-block: 2rem;
+}
+
+.dark-section{
+    width: 100%;
+    height: auto;
+    background: #121212;
+    color: white;
+    overflow: hidden;
+}
+
+.pipic{
+    height: 120%;
+    width: auto;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.minds-behind-pic{
+    width:20%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.koz-container{
+    background-color:#454f82;
+    color: white;
+}
+
+.contentBx.koz.text-wrapper {
+    max-width: 46rem;
+}
+
+.contentBx.img-wrapper-koz {
+    box-shadow:   inset -12px -12px 30px 5px rgb(79 91 144 / 90%),
+  inset 12px 12px 30px 5px rgb(33 50 84 / 66%);
+    border-radius: 3rem;
+    margin-right: 5rem;
+}
+
+.koz-divider{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.koz-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 142px;
+    transform: translateY(2px) rotateY(180deg);
+}
+
+.koz-divider .shape-fill {
+    fill: #454F82;
+}
+

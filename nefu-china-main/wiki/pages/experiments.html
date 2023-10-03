@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+  
+{% block title %}Experiments{% endblock %}
+{% block lead %}Describe the research, experiments, and protocols you used in your iGEM project.{% endblock %}
+
+{% block page_content %}
+
+<div class="image" style="background-image: url('https://gitlab.igem.org/2023/nefu-china/-/raw/test/img/mountain%20range.jpg'); height: 300px; position: relative; text-align: center;">
+  <div class="standard-header banner-v2 curvy-divider" style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);">
+    <h1>experiment</h1>
+  </div>
+</div>
+
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <div class="body-container wave-div narrow">
+      <div class="container">
+        <div class="about-section d-flex flex-row justify-content-center align-items-center">
+          <div class="wrapper">
+            <h2>Introduction</h2>
+            <p>We performed various experiments during the course of our project. In this section, we will give an overview of the experiments we ran, outlined in our Detailed Workflow document below.</p>
+          </div>
+          <div class="img-wrapper bunch-of-lfas">
+            <img style="max-height: 15rem; padding: 2rem;"src="https://static.igem.wiki/teams/4477/wiki/images/lfa-group.svg" alt="lfa bunch">
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="body-section">
+    <h2>Virginia 2022 Protocol Handbook</h2>
+    <div class="container">
+      <object style="height: 50rem;" data="https://static.igem.wiki/teams/4477/wiki/pdf/virginia-2022-protocols-handbook.pdf" type="application/pdf" width="100%" height="100%">
+        <iframe style="height: 50rem;" src="https://static.igem.wiki/teams/4477/wiki/pdf/virginia-2022-protocols-handbook.pdf" width="100%" height="100%" style="border: none;">
+        This browser does not support PDFs. Please download the PDF to view it: 
+        <a href="https://static.igem.wiki/teams/4477/wiki/pdf/virginia-2022-protocols-handbook.pdf">Download PDF</a>
+        </iframe>
+      </object>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

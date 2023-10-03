@@ -1,0 +1,308 @@
+{% extends "layout.html" %}
+  
+{% block title %}Model{% endblock %}
+{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+
+{% block page_content %}
+
+<div class="image" style="background-image: url('https://gitlab.igem.org/2023/nefu-china/-/raw/test/img/mountain%20range.jpg'); height: 300px; position: relative; text-align: center;">
+  <div class="standard-header banner-v2 curvy-divider" style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);">
+    <h1>model</h1>
+  </div>
+</div>
+
+<div class="modeling about d-flex flex-column align-items-center justify-content-center curvy-divider">
+  <div class="body-container wave-div narrow">
+    <div class="container">
+      <div class="d-flex flex-row justify-content-center align-items-center">
+        <div class="narrow-content about-wrapper">
+          <h2>Solving Problems with Precision</h2>
+          <div class="no-text-wrapper">
+            <p>Modeling is a <span class="bold-text">vital part</span> of the design process for any project because it allows variables that cannot be feasibly tested in Wet Lab to be simulated. Project modeling is more than analyzing important variables; <span class="bold-text">it accelerates the engineering design cycle</span> and <span class="bold-text">saves resources.</span> 
+            <br>
+            For our project, modeling has provided a <span class="bold-text">streamlined process</span> for wet lab experiments by testing variables that are in question and optimizing the conditions. We used modeling to <span class="bold-text">predict the 3D structures of antibodies</span> that we are working with, which would normally take several months to determine experimentally. We also focused on <span class="bold-text">LFA optimization</span> to predetermine which parameters would produce the best results in the lab.</p>
+          </div>
+        </div>
+        <div class="img-wrapper computer">
+          <img style="padding-left: 3rem;" src="https://static.igem.wiki/teams/4477/wiki/images/modelingsmall.svg" alt="model program">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gray-divider">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+  </div>
+</div>
+
+
+  <div class="body-container d-flex flex-column" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-sine">
+    <div class="container">
+      <div class="body-section top-page" id="head1">
+        <h2>Protein Modeling</h2>
+        <div class="text-wrapper">
+      </div>
+      </div>
+
+
+      <!-- McPC603 -->
+      <div class="pdb-struct McPC603-scFv d-flex flex-column flex-wrap align-items-center justify-content-evenly">
+        <!-- HELPER SCRIPT -->
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Create NGL Stage object
+        var stage = new NGL.Stage( "McPC603-VP", {
+          // NEED TO CHANGE THIS LATER if we change page color
+          backgroundColor: 'white',
+        });
+
+        // Load PDB
+        stage.loadFile("{{ url_for('static', filename = 'pdb/mcpc603-scFv.pdb') }}").then(function (oMcPC603) {
+          oMcPC603.addRepresentation("surface", {
+              colorScheme: "bfactor",
+              contour: "true",
+              colorScale: "spectral",
+          });
+          oMcPC603.addRepresentation("cartoon", {
+
+          });
+          stage.setSpin(true);
+          oMcPC603.autoView();
+          
+        });
+        });
+        </script>
+        <!-- Initialize the Viewport -->
+        <div class="pdb">
+          <div id="McPC603-VP" style="width: 400px; height: 500px;"></div>
+        </div>
+        <div class="pdb-cap wrapper">
+          <h3>McPC603 scFv Ribbon and Surface Model</h3>
+          <div class="wrapper">
+            <p class="italic-text">This is a model generated from AlphaFold of the McPC603 antibody fragment. We generated models like these for our other antibodies to visualize them. Scroll to zoom in and out and click/drag to move the model around!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section" id="head2">
+        <div class="text-wrapper">
+          <h2>Lateral Flow Assay Modeling: Introduction</h2>
+          <h4>The Goal</h4>
+       
+        </div>
+      </div>
+    </div>  
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Constraints</h4>
+      </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Remarks</h4>
+          <p><span class="bold-text">We will consider all concentrations in terms of mg/L.</span> This is due to the unknown molar mass of oxLDL. Currently, the concentration of oxLDL in the blood which correlates to a high risk of developing atherosclerosis is only reported in terms of mg/dL. Thus, we are unable to convert this threshold into molar concentrations. So, we used an online protein calculator to calculate the weight of each component (listed below) of the LFA.<sup>2</sup></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>The Problem Setup<h4>
+        </div>
+
+        <div class="img-wrapper lfa">
+          <img style="width: 60%;" src="https://static.igem.wiki/teams/4477/wiki/labeled-lfa-01-artboard-1-1-2.svg" alt="">
+          <p>  
+            A standard LFA, including our design, is composed of four different pads: the sample pad, the conjugate pad, the nitrocellulose membrane, and the absorbent pad. See <a href="{{ url_for('pages', page='design') }}">the design page</a> for a walkthrough of how an LFA works.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h3>Scenario 1: At least 0.800 mg/dL of oxLDL is present in the sample</h3>
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h3>Scenario 2: Less than 0.800 mg/dL of oxLDL is present in the sample</h3>
+       </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h2>Components and terms</h2>
+      
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Remarks</h4>
+       </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Assumptions</h4>
+    
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Using the Advection Dispersion Reaction Equation (ADRE)</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Using Mass Action Kinetics Equations</h4>
+       </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Reaction Chemical Equations</h4>
+         
+          <div class="img-wrapper d-flex flex-column justify-content-center align-items-center">
+            <img src="https://static.igem.wiki/teams/4477/wiki/images/reactioneqs.png" alt="">
+            <div class="caption-wrapper">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Breaking the Lateral Flow Assay (LFA) into Three Systems</h4>
+       
+        </div>
+        <div class="img-wrapper d-flex flex-column justify-content-evenly align-items-center">
+          <img style="padding-block: 2rem;  width: 60%;" src="https://static.igem.wiki/teams/4477/wiki/images/123lfamodel.png" alt="">
+       </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Partial Differential Equation (PDE) System</h4>
+        <div class="img-wrapper  d-flex flex-column  justify-content-center align-items-center">
+            <img style="padding-block: 2rem; width: 60%;" src="https://static.igem.wiki/teams/4477/wiki/images/latex.png" alt="">
+            <div class="caption-wrapper">
+              <p></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>The Role of Mass Action Kinetics and Rate Constants</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h2>Solving the Systems of Equations (Using MatLab)</h2>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <h3>To solve partial differential equations, two important conditions are needed for every equation.</h3>
+          </div>
+        </div>
+      </div>
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Initial Conditions</h4>
+         
+        </div>
+      </div>
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Boundary Conditions</h4>
+          <p>Boundary conditions are the <span class="bold-text">system’s behavior at edge points at any given time t</span>. In this case, the boundary conditions are the known concentrations (or known behavior of concentrations) of specific components defined at the leftmost and rightmost edges of each system.</p>
+          <div class="body-section">
+            <h3>Left Edge Boundary Condition</h3> 
+         </div>
+
+          <div class="body-section">
+            <h3>Dirichlet Boundary Conditions</h3>
+         </div>
+
+          <div class="body-section">
+            <h3>Neumann Boundary Conditions</h3>
+           
+  
+          </div>
+
+        </div>
+      </div>
+
+      <div class="body-section">
+        <div class="text-wrapper">
+      
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h2>Results</h2>
+          <h4>Informing Physical Design of AtheroSHuffle</h4>
+     
+        </div>
+      </div>
+      <div class="body-section">
+        <div class="text-wrapper">
+          <h4>Model Applications</h4>
+          <p>In addition to predicting the minimum concentration of detector unit to generate a visible signal, the model is also informative of the behavior of each LFA component when 5.61*10<sup>-4</sup> mg/L of the detector unit is used on the conjugate pad. For example, we can examine the behavior of the CAD complex at this optimal detector unit concentration.</p>
+          <div class="img-wrapper d-flex flex-column justify-content-center align-items-center">
+            <img style="padding-block: 2rem; width: 60%;" src="https://static.igem.wiki/teams/4477/wiki/images/result-modeling.png" alt="">
+            <p><span class="bold-text">Fig 2. </span> This figure depicts the concentration of CAD or the complex-analyte-detector-unit complex as a function vs. time.</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="body-section bottom-page">
+        <div class="text-wrapper">
+    </div>
+      </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+.accordion{
+    width: 100%;
+    padding: max(2vh, 1rem);
+}
+
+.accordion-header{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+  }
+
+.accordion-button:focus {
+    border-color: rgba(0, 0, 0, 0) !important;
+    box-shadow: none !important;
+
+}
+
+.img-diagnostic-diagram{
+  width: 100%;
+  height: auto;
+}
+
+.subtitle-wrapper{
+  max-width: 30rem;
+  text-align: center;
+  padding-block: 1rem;
+}
+
+.blob-graphic img{
+  width: clamp(200px, 20%, 300px);
+}
+
+.img-pathogenesis{
+  max-width: 70%;
+  height: auto;
+  border-radius: 5%;
+}

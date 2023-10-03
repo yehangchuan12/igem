@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calendar{
+    font-size: 62.5%;
+    position: relative;
+    width: 21.6rem;
+    height: 26rem;
+    background-color: #eeeeee;
+    transform-origin: center;
+    border-radius: 10px;
+    margin-inline: 5rem;
+    margin-block: 3rem;
+}
+
+.month{
+    width: 100%;
+    height: 7rem;
+    background-color: #c8ceff;
+    border-radius: 10px 10px 0px 0px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.btn.active-month{
+    border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+.btn.month-btn:hover{
+    border-bottom: 5px solid white;
+    transition: 0.4s;
+}
+
+.date{
+    width: 100%;
+}
+
+.date h1{
+    font-size: 1.4rem;
+}
+
+.month-select{
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: center;
+    gap: 0.2rem;
+    margin-top: 0.1rem;
+}
+
+.month i{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.month h2{
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: black!important;
+}
+
+.month p{
+    font-size: 1.1rem;
+}
+
+.weekdays{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    color: #323232;
+}
+
+.weekdays div{
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(22.2rem/7);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.days div{
+    font-size: 1rem;
+    margin: .3rem;
+    width: calc(17.2rem/7);
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.week:hover{
+    background-color:#ffd7d7;
+    border-radius: 100px;
+    transition: 0.5s;
+    box-shadow: -12px -12px 30px 5px rgba(255, 255, 255, 0.9),
+  12px 12px 30px 5px rgba(50, 58, 73, 0.2);
+}
+
+.week.active-week{
+    background-color: #ffd7d7;
+    border-radius: 1000px;
+    box-shadow: -8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9,
+    8px 8px 20px #0001, 5px 5px 6px 0px #0001;
+    
+}
+
+.next-date{
+    opacity: 0.5;
+}
+
+.prev-date{
+    opacity: 0.4;
+}
+
+.hidden{
+    display: none;
+}

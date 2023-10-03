@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+{% block page_content %}
+
+
+<div id="mountain">
+  <h1>IGEM<br />阿巴阿巴阿巴</h1>
+  <div class="background"><span>NAME</span></div>
+  <h2>
+    项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍项目介绍￥！&》+-@#09iuri
+    aaaaaaaaaaaaaaaaaaa放一堆字在这里
+  </h2>
+</div>
+<div class="shell">
+    
+    <div class="image" style="background-image: url('https://gitlab.igem.org/2023/nefu-china/-/raw/test/img/mountain%20range.jpg')"></div>
+    <div class="heading">
+      <h1>标题标题标题</h1>
+    </div>
+    <div class="text">
+        <div>
+            <h1>标题标题标题</h1>
+            <p>&nbsp;&nbsp;abababa一堆内容aaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            </p>
+        </div>
+    </div>
+
+    <div class="image" style="background-image: url('https://gitlab.igem.org/2023/nefu-china/-/raw/test/img/mountain%20range.jpg')"></div>
+    <div class="heading">
+      <h1>标题标题标题</h1>
+    </div>
+    <div class="text">
+        <div>
+            <h1>标题标题标题</h1>
+            <p>&nbsp;&nbsp;abababa一堆内容aaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            </p>
+        </div>
+    </div>
+
+    <div class="image" style="background-image: url('https://gitlab.igem.org/2023/nefu-china/-/raw/test/img/mountain%20range.jpg')"></div>
+    <div class="heading">
+      <h1>标题标题标题</h1>
+    </div>
+    <div class="text">
+        <div>
+            <h1>标题标题标题</h1>
+            <p>&nbsp;&nbsp;abababa一堆内容aaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            </p>
+        </div>
+    </div>
+
+    <div class="image" style="background-image: url('https://gitlab.igem.org/2023/nefu-china/-/raw/test/img/mountain%20range.jpg')"></div>
+    <div class="heading">
+      <h1>标题标题标题</h1>
+    </div>
+    <div class="text">
+        <div>
+            <h1>标题标题标题</h1>
+            <p>&nbsp;&nbsp;abababa一堆内容aaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            </p>
+        </div>
+        
+    </div>
+</div>
+<script>
+    const background = document.querySelector(".background");
+
+    document.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY !== 0) {
+        background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`;
+      } else {
+        background.style.backgroundPosition = "";
+      }
+    });
+  </script>
+
+
+{% endblock %}

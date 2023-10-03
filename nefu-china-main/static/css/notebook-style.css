@@ -1,0 +1,71 @@
+.notebook-about-wrapper{
+    text-align: justify;
+    word-break: keep-all;
+    max-width: 40rem;
+    padding-block: 4rem;
+}
+
+.about-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper.test-tube {
+    padding: 3rem;
+}
+
+.notebook-section {
+    background-color: #ECF0F3;
+    margin-bottom: 2rem;
+}
+
+.calendar-container{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar{
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow:9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+}
+
+.notebook-container{
+    height: auto;
+    padding: min(1rem, 10vw);
+}
+
+.entry-card{
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    width: 30rem;
+    flex-wrap: nowrap;
+    -webkit-box-shadow: 0px 11px 22px 0px rgba(0,0,0,0.48);
+    -moz-box-shadow: 0px 11px 22px 0px rgba(0,0,0,0.48);
+    box-shadow: 0px 11px 22px 0px rgba(0,0,0,0.48);
+}
+
+.entry .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.entry{
+    padding: 3rem;
+    max-width: 40rem;
+    box-shadow: -12px -12px 30px 5px rgb(255 255 255 / 90%), 12px 12px 30px 5px rgb(50 58 73 / 20%);
+}
+
+.footer-divider.notebook-color {
+    background-color: #ecf0f3;
+}
+
